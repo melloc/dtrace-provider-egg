@@ -1,0 +1,8 @@
+(run (make -C libusdt))
+(compile -s -O1 -L./libusdt -lusdt -d1 "dtrace-provider.scm" -j dtrace-provider)
+(compile -s -O1 -d0 "dtrace-provider.import.scm")
+
+(install-extension
+ 'dtrace-provider
+ '("dtrace-provider.so" "dtrace-provider.import.so")
+ '((version 1.0)))

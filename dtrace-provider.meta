@@ -1,0 +1,4 @@
+((synopsis "USDT probes for CHICKEN Scheme programs")
+ (author "Cody Peter Mello")
+ (license "BSD")
+ (category os))
